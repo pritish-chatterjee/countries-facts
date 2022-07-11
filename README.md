@@ -1,10 +1,5 @@
-# Countries-And-Their-Neighbours
+# Countries' Facts
 
-A simple API based webpage which randomly fetches a country and it's neighbor, if it exists, and provides details such as it's population, currency, and language
+A simple REACT based webpage by which you can get important facts related to any country either by typing it out or selecting it from a list, all of which are fecthed from the API in use.
 
 To fetch data of the countries I've used the free API - REST Countries (https://restcountries.com/).
-
-Minor issues you might face :
-
-1. Data for some countries is not available, hence cannot be rendered.
-2. Countries which are islands do not have any neighbors, hence they'll show an error.
