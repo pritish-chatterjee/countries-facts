@@ -6,7 +6,7 @@ function Footer() {
     <div className="navbar footer">
       <div>Made by Pritish Chatterjee</div>
       <div className="socials">
-        <a href={process.env.REACT_APP_WEBSITE_URL} target="blank">
+        <a href="https://pritish.netlify.app/" target="blank">
           <img
             className="website-img"
             src="website.svg"
@@ -14,7 +14,10 @@ function Footer() {
             target="blank"
           ></img>
         </a>
-        <a href={process.env.REACT_APP_LINKEDIN_URL} target="blank">
+        <a
+          href="https://www.linkedin.com/in/pritishchatterjee48/"
+          target="blank"
+        >
           <img
             className="linkedin-img"
             src="linkedin.svg"
@@ -22,7 +25,7 @@ function Footer() {
             target="blank"
           ></img>
         </a>
-        <a href={process.env.REACT_APP_GITHUB_URL} target="blank">
+        <a href="https://github.com/pritish-chatterjee" target="blank">
           <img
             className="github-img"
             src="github.svg"
