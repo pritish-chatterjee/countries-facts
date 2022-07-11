@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+
+.app-container {
+  /* margin-top: 6vh; */
+  height: 100vh;
+  background: rgb(8, 98, 159);
+  background: linear-gradient(
+    169deg,
+    rgba(8, 98, 159, 1) 0%,
+    rgba(3, 2, 19, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  padding: 10px;
+}
+
+.country-form {
+  width: 70vw;
+}
+
+.country-btn {
+  width: 10vw;
+}
+
+.card {
+  width: 70vw;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.country-img {
+  display: flex;
+  align-items: center;
+}
+
+.main-flag {
+  height: 70px;
+  width: 70px;
+  border-radius: 40px;
+  margin-right: 10px;
+}
+
+.list-group-item {
+  background-color: black;
+  color: white;
+}
+
+.neighbors {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.neighbors-list-name {
+  margin-left: 2vw;
+}
+
+.neighbor-btns {
+  padding: 2px;
+  margin: 2px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 69.4vw;
+  margin-top: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.countries-list {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  overflow: auto;
+  border-radius: 0px 0px 10px 10px;
+  width: 70vw;
+  margin-top: 0px;
+  margin-bottom: 12vh;
+}

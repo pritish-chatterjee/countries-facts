@@ -1,0 +1,15 @@
+.navbar {
+  justify-content: center;
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.image {
+  margin-right: 10px;
+}
