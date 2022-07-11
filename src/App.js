@@ -99,14 +99,46 @@ function App() {
                   <b>Name :</b> {countryData.name.common}
                 </li>
                 <li className="list-group-item">
-                  <b>Capital City :</b> {countryData.capital[0]}
+                  <b>Capital City :</b>
+                  {!countryData.capital && (
+                    <div>
+                      <em> No Capital Found</em>
+                    </div>
+                  )}
+                  {countryData.capital && <div>{countryData.capital[0]}</div>}
                 </li>
                 <li className="list-group-item">
                   <b>Population :</b>{" "}
-                  {(countryData.population / 1000000).toFixed(2)} million
+                  {!countryData.population && (
+                    <div>
+                      <em>No Population Data Found</em>
+                    </div>
+                  )}
+                  {countryData.population > 0 && (
+                    <div>
+                      {(countryData.population / 1000000).toFixed(2)} million
+                    </div>
+                  )}{" "}
                 </li>
                 <li className="list-group-item">
-                  <b>Currency :</b> {Object.keys(countryData.currencies)[0]}
+                  <b>Currency :</b>
+                  {!countryData.currencies && (
+                    <div>
+                      <em>No Currency Data Found</em>
+                    </div>
+                  )}
+                  {countryData.currencies && (
+                    <div>{Object.keys(countryData.currencies)[0]}</div>
+                  )}
+                </li>
+                <li className="list-group-item">
+                  <b>Code (CCA 3) :</b>
+                  {!countryData.cca3 && (
+                    <div>
+                      <em>No CCA3 Code Found</em>
+                    </div>
+                  )}
+                  {countryData.cca3 && <div>{countryData.cca3}</div>}
                 </li>
               </ul>
             </div>
@@ -117,7 +149,20 @@ function App() {
                 </li>
                 <li className="list-group-item">
                   <b>Official Language : </b>
-                  {countryData.languages[Object.keys(countryData.languages)[0]]}
+                  {!countryData.languages && (
+                    <div>
+                      <em>No Official Language Data Found</em>
+                    </div>
+                  )}
+                  {countryData.languages && (
+                    <div>
+                      {
+                        countryData.languages[
+                          Object.keys(countryData.languages)[0]
+                        ]
+                      }
+                    </div>
+                  )}
                 </li>
                 <li className="list-group-item">
                   <b>Region :</b> {countryData.region}
@@ -142,7 +187,7 @@ function App() {
               {countryData.borders &&
                 countryData.borders.map((item, index) => {
                   return (
-                    <li className="list-group-item neighbor-btns">
+                    <li key={index} className="list-group-item neighbor-btns">
                       {" "}
                       <button
                         onClick={handleNewCountryByCode}
