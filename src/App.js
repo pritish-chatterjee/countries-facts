@@ -27,6 +27,7 @@ function App() {
       .get(`https://restcountries.com/v3.1/name/${country}`)
       .then(function (response) {
         setCountryData(response.data[0]);
+        console.log(response.data[0]);
       })
       .catch(function (error) {
         alert("No such country found. Try Again!");
@@ -131,23 +132,29 @@ function App() {
             </div>
             <div className="card neighbors">
               <span className="neighbors-list-name">
-                <b>Neighbors : </b>
+                <b>Neighbors :</b>
               </span>
-              {countryData.borders.map((item, index) => {
-                return (
-                  <li className="list-group-item neighbor-btns">
-                    {" "}
-                    <button
-                      onClick={handleNewCountryByCode}
-                      type="button"
-                      className="btn btn-dark "
-                      value={item}
-                    >
-                      {item}
-                    </button>
-                  </li>
-                );
-              })}
+              {!countryData.borders && (
+                <div>
+                  <em> No Neighbors</em>
+                </div>
+              )}
+              {countryData.borders &&
+                countryData.borders.map((item, index) => {
+                  return (
+                    <li className="list-group-item neighbor-btns">
+                      {" "}
+                      <button
+                        onClick={handleNewCountryByCode}
+                        type="button"
+                        className="btn btn-dark "
+                        value={item}
+                      >
+                        {item}
+                      </button>
+                    </li>
+                  );
+                })}
             </div>
           </div>
         )}
