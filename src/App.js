@@ -124,7 +124,7 @@ function App() {
                 <li className="list-group-item">
                   <b>Map Link : </b>
                   <a href={countryData.maps.googleMaps} target="blank">
-                    Link
+                    Visit Now
                   </a>
                 </li>
               </ul>
